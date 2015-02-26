@@ -15,31 +15,15 @@
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 <title>jQuery Mobile Web App</title>
-<!-- cordova api
+<!-- cordova api -->
  <script type="text/javascript" charset="utf-8" src="js\cordova.js"></script>
- -->
 
 
-  <!-- Camera Plugin 
+
+  <!-- Camera Plugin -->
  <script type="text/javascript" charset="utf-8" src="js\camera.js"></script>
-  -->
-  
-  <script type = "text/javascript">
-	 function capturePhoto() {
-	navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
-		destinationType: Camera.DestinationType.DATA_URL});
-	}
-	
-	function onSuccess(imageData) {
-		var image = document.getElementById('myImage');
-		image.src = "data:image/jpeg;base64," + imageData;
-	}
-
-	function onFail(message) {
-		alert('Failed because: ' + message);
-	}
-  </script>
  
+  
    
 </head> 
 
@@ -57,7 +41,7 @@
         <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
         <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
 		-->
-        <img style="display:none;width:60px;height:60px;" id="myImage" src="" />
+        <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
         <img style="display:none;" id="largeImage" src="" />
 	</div>
 	
