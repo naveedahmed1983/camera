@@ -2,21 +2,30 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Include meta tag to ensure proper rendering and touch zooming -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+	<!-- Include the jQuery library -->
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+	<!-- Include the jQuery Mobile library -->
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
 <title>jQuery Mobile Web App</title>
 <!-- cordova api
  <script type="text/javascript" charset="utf-8" src="js\cordova.js"></script>
  -->
 
- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
-  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
 
   <!-- Camera Plugin 
  <script type="text/javascript" charset="utf-8" src="js\camera.js"></script>
   -->
   
   <script type = "text/javascript">
-  function capturePhoto() {
+	 function capturePhoto() {
 	navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
 		destinationType: Camera.DestinationType.DATA_URL});
 	}
